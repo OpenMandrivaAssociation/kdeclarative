@@ -16,6 +16,7 @@ BuildRequires: cmake
 BuildRequires: ninja
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: cmake(KF5ItemViews)
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5CoreAddons)
