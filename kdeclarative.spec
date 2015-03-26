@@ -69,6 +69,7 @@ DESTDIR="%{buildroot}" ninja install -C build
 %find_lang %{name}%{major}
 
 %files -f %{name}%{major}.lang
+%{_bindir}/kpackagelauncherqml
 %{_libdir}/qt5/qml/org
 
 %files -n %{libname}
