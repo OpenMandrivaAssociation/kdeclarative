@@ -14,10 +14,12 @@ License: GPL
 Group: System/Libraries
 BuildRequires: cmake
 BuildRequires: ninja
+BuildRequires: pkgconfig(epoxy)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5Qml)
 BuildRequires: pkgconfig(Qt5Quick)
+BuildRequires: pkgconfig(Qt5Network)
 BuildRequires: cmake(KF5ItemViews)
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5CoreAddons)
@@ -30,6 +32,7 @@ BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5GlobalAccel)
 BuildRequires: cmake(KF5GuiAddons)
+BuildRequires: cmake(KF5Package)
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
 Requires: %{libname} = %{EVRD}
