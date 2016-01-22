@@ -5,13 +5,14 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdeclarative
-Version:	5.18.0
-Release:	1
+Version: 5.18.0
+Release: 2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 framework for integrating with QML
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
+Patch0: kdeclarative-5.18.0-no-lto-in-quickaddons.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(epoxy)
 BuildRequires: pkgconfig(Qt5Core)
@@ -55,6 +56,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
