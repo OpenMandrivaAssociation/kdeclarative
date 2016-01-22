@@ -1,8 +1,0 @@
-diff -Naur kdeclarative-5.18.0/src/quickaddons/CMakeLists.txt kdeclarative-5.18.0.tpg/src/quickaddons/CMakeLists.txt
---- kdeclarative-5.18.0/src/quickaddons/CMakeLists.txt	2016-01-02 16:29:11.000000000 +0000
-+++ kdeclarative-5.18.0.tpg/src/quickaddons/CMakeLists.txt	2016-01-22 21:30:12.476788816 +0000
-@@ -1,3 +1,4 @@
-+add_definitions(-fno-lto)
- add_library(KF5QuickAddons
-             imagetexturescache.cpp
-             managedtexturenode.cpp
