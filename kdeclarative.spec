@@ -1,5 +1,3 @@
-%define _disable_lto 1
-
 %define major 5
 %define libname %mklibname KF5Declarative %{major}
 %define devname %mklibname KF5Declarative -d
@@ -8,7 +6,7 @@
 
 Name: kdeclarative
 Version: 5.18.0
-Release: 3
+Release: 4
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 framework for integrating with QML
 URL: http://kde.org/
