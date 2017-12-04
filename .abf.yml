@@ -1,4 +1,2 @@
-removed_sources:
-  kdeclarative-5.13.0.tar.xz: c61fd5f66e4209f731f48fb087827d143db9796a
 sources:
-  kdeclarative-5.40.0.tar.xz: f9d4d3631d8e2c601c4d9f800bee77f0cc15fb50
+  kdeclarative-5.41.0.tar.xz: fef9c778c69339668d82faded7b3233693dc4533
