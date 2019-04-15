@@ -34,6 +34,7 @@ BuildRequires: cmake(KF5GlobalAccel)
 BuildRequires: cmake(KF5GuiAddons)
 BuildRequires: cmake(KF5Package)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 
