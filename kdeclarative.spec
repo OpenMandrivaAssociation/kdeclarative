@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kdeclarative
-Version: 5.61.0
+Version: 5.62.0
 Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 framework for integrating with QML
@@ -67,7 +67,9 @@ Developer documentation for %{name} for use with Qt Assistant
 
 %prep
 %setup -q
-%cmake_kde5
+# BUILD_QCH=OFF is a workaround for a weird doxygen issue
+# and should be removed ASAP.
+%cmake_kde5 -DBUILD_QCH:BOOL=OFF
 
 %build
 %ninja -C build
@@ -91,5 +93,6 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_libdir}/qt5/mkspecs
 %{_libdir}/cmake/KF5Declarative
 
-%files -n %{name}-devel-docs
-%{_docdir}/qt5/*.{tags,qch}
+# Restore as soon as QCH docs are fixed
+#%files -n %{name}-devel-docs
+#%{_docdir}/qt5/*.{tags,qch}
