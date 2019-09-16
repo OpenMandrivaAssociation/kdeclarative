@@ -34,7 +34,7 @@ BuildRequires: cmake(KF5GlobalAccel)
 BuildRequires: cmake(KF5GuiAddons)
 BuildRequires: cmake(KF5Package)
 # For QCH format docs
-BuildRequires: doxygen
+BuildRequires: doxygen >= 1.8.16-2
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 
@@ -67,9 +67,7 @@ Developer documentation for %{name} for use with Qt Assistant
 
 %prep
 %setup -q
-# BUILD_QCH=OFF is a workaround for a weird doxygen issue
-# and should be removed ASAP.
-%cmake_kde5 -DBUILD_QCH:BOOL=OFF
+%cmake_kde5
 
 %build
 %ninja -C build
@@ -93,6 +91,5 @@ Developer documentation for %{name} for use with Qt Assistant
 %{_libdir}/qt5/mkspecs
 %{_libdir}/cmake/KF5Declarative
 
-# Restore as soon as QCH docs are fixed
-#%files -n %{name}-devel-docs
-#%{_docdir}/qt5/*.{tags,qch}
+%files -n %{name}-devel-docs
+%{_docdir}/qt5/*.{tags,qch}
