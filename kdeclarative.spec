@@ -33,6 +33,7 @@ BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5GlobalAccel)
 BuildRequires: cmake(KF5GuiAddons)
 BuildRequires: cmake(KF5Package)
+BuildRequires: cmake(KF5Notifications)
 # For QCH format docs
 BuildRequires: doxygen >= 1.8.16-2
 BuildRequires: qt5-assistant
